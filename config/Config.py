@@ -32,7 +32,7 @@ class Config(object):
             return 'Is not in the config file'
         return self.config[property_name]
 
-    def clean_text(cls, phrases):
+    def clean_text(self, phrases):
         regex_string = [
             {r'>\s+': u'>'},  # remove spaces after a tag opens or closes
             {r'\s+': u' '},  # replace consecutive spaces
@@ -87,7 +87,7 @@ class Config(object):
         phrases = phrases.replace("&nbsp;", " ")
         phrases = phrases.replace("\\", " ")
         phrases = phrases.replace("/", " ")
-        phrases.lower()
+        phrases = phrases.lower()
         phrases = ''.join([i for i in phrases if not i.isdigit()])
         return phrases
 
