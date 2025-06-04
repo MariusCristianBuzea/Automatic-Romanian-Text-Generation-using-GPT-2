@@ -25,7 +25,7 @@ Table 1 and Figure 2 presents the distributions of the test, validation, and tra
 
 </div>
 
-The experiments were performed on a single server using tf.distribute.Mirrored Strategy, a TensorFlow API to distribute training across multiple GPUs and several software or packages such as CUDA (vers. 11.2), Python (vers. 3.9.7) and TensorFlow (vers. 2.4.1).The proposed MCBGPT-2 model was trained and validated using the aforementioned news corpus, that contain 18 fake news and 24,582 true news, 368 news with negative polarity and 2135 news with positive polarity, being split in equal parts between train, test and validation datasets. For this research, the Adam optimizer is used with a small learning rate (e.g., 3 x 105), a loss function such as sparse categorical cross-entropy and a vocabulary size of 60,000 words. Several training statistics of the proposed model, including the hyperparameters and training time, are presented in Table 2. 
+The experiments were performed on a single server using tf.distribute.Mirrored Strategy, a TensorFlow API to distribute training across multiple GPUs and several software or packages such as CUDA (vers. 11.2), Python (vers. 3.9.7) and TensorFlow (vers. 2.4.1).The proposed MCBGPT-2 model was trained and validated using the aforementioned news corpus, that contain 18 fake news and 24,582 true news, 368 news with negative polarity and 2135 news with positive polarity, being split in equal parts between train, test and validation datasets. For this research, the Adam optimizer is used with a small learning rate (e.g., 3e-5), a loss function such as sparse categorical cross-entropy and a vocabulary size of 60,000 words. Several training statistics of the proposed model, including the hyperparameters and training time, are presented in Table 2. 
 
 <div align="center">
 
@@ -48,7 +48,7 @@ BATCH_SIZE = 12
 BUFFER_SIZE = 1000
 # defining our optimizer
 optimizer = tf.keras.optimizers.Adam(learning_rate=3e-5, epsilon=1e-08, clipnorm=1.0)
-# definining our loss function
+# defining our loss function
 loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 # defining our metric which we want to observe
 metric = tf.keras.metrics.SparseCategoricalAccuracy('accuracy')

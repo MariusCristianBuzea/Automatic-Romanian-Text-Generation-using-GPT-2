@@ -157,7 +157,7 @@ dataset = dataset.shuffle(BUFFER_SIZE).batch(BATCH_SIZE, drop_remainder=True)
 
 # defining our optimizer
 optimizer = tf.keras.optimizers.Adam(learning_rate=3e-5, epsilon=1e-08, clipnorm=1.0)
-# definining our loss function
+# defining our loss function
 loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 # defining our metric which we want to observe
 metric = tf.keras.metrics.SparseCategoricalAccuracy('accuracy')
