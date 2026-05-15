@@ -1,5 +1,36 @@
 # Automatic Romanian Text Generation using GPT-2
 
+## Prezentare
+
+Generare automată de text în limba română cu GPT-2, antrenat și evaluat pe corpusuri de știri.
+
+README-ul pastreaza informatiile practice ale proiectului: datele folosite, modelele, rezultatele si pasii de rulare, acolo unde acestea sunt disponibile in repository.
+
+Modele Hugging Face mentionate in proiect:
+- `https://huggingface.co/readerbench/RoGPT2-base`
+
+## Pornire rapida
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+## Date, modele si rezultate
+
+Date sau resurse detectate in repository:
+- `dataset/gpt_test_dataset.csv`
+- `dataset/gpt_training_dataset.csv`
+- `dataset/gpt_validation_dataset.csv`
+
+Modele asociate:
+- `https://huggingface.co/readerbench/RoGPT2-base`
+
+Daca exista rezultate experimentale, acestea trebuie documentate in aceasta sectiune cu metricile si configuratia folosita.
+
+---
+
 One of the most significant tasks in natural language processing (NLP) is text generation, which beneficiate from the recent architectures that use large pre-trained transformer models, such as the Generative Pre-trained Transformer-2 ([GPT-2](https://github.com/openai/gpt-2)) or GPT-3 developed by OpenAI, and Google’s Bidirectional Encoder Representations from Transformers ([BERT](https://aclanthology.org/N19-1423/)). The paper presents a NLG model based on the GPT-2 architecture that generates Romanian online news, using manually annotated texts. A small Romanian GPT-2 model, using 24 thousand news items, named MCBGPT-2 was developed, tested and evaluated. Additionally, an existing Romanian GPT-2 model, called [RoGPT-2](https://huggingface.co/readerbench/RoGPT2-base), was added to experiments. For evaluation, is presented a comparison of several automatic metrics such as [BLEU](https://dl.acm.org/doi/10.3115/1073083.1073135), [ROUGE](https://aclanthology.org/W04-1013), [BLEURT](https://aclanthology.org/2020.acl-main.704/) and [BERTScore](https://arxiv.org/abs/1904.09675) applied to generated news items from the test and validation datasets. Experimental results revealed that the MCBGPT-2 and RoGPT-2 models provided similar performances in text generation task for Romanian language, using less data for MCBGPT-2 model’s training process.
 
 **Dataset description**
