@@ -1,5 +1,9 @@
 # Automatic Romanian Text Generation using GPT-2
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717)](https://github.com/MariusCristianBuzea/Automatic-Romanian-Text-Generation-using-GPT-2)
+![Language](https://img.shields.io/badge/Language-Romanian%20NLP-0b7285)
+![Python](https://img.shields.io/badge/Python-3.x-3776ab)
+![Transformers](https://img.shields.io/badge/Transformers-Hugging%20Face-ffcc00)
 
 ## Prezentare
 
