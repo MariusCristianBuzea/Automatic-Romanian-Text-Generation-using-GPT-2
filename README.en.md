@@ -12,7 +12,7 @@ Automatic Romanian text generation with GPT-2 and online news evaluation.
 
 ## Overview
 
-Generare automata de text in Romanian language cu GPT-2, trained si evaluat pe corpusuri de news.
+Generare automata de text in Romanian language with GPT-2, trained si evaluat pe corpusuri de news.
 
 README-ul pastreaza informatiile practice ale proiectului: datale folosite, modelele, results si pasii de run, acolo unde acestea sunt disponibile in repository.
 
@@ -20,7 +20,6 @@ Modele Hugging Face mentionate in proiect:
 - `https://huggingface.co/readerbench/RoGPT2-base`
 
 ## Quick start
-
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
@@ -37,7 +36,7 @@ data sau redetected sources in repository:
 Modele asociate:
 - `https://huggingface.co/readerbench/RoGPT2-base`
 
-Daca exista results experimentale, acestea must documentate in aceasta sectiune cu metricsle si configuratia folosita.
+if exista results experimentale, acestea must documentate in aceasta sectiune with metricsle si configuratia folosita.
 
 ---
 
@@ -82,8 +81,7 @@ The experiments were performed on a single server using tf.distribute.Mirrored S
 </div>
 
 **The MCBGPT-2 model**
----
-```python
+---```python
 block_size = 512
 BATCH_SIZE = 12
 BUFFER_SIZE = 1000
@@ -114,8 +112,7 @@ tokenizer.save_pretrained(output_dir)
 
 
 **Generate text with the MCBGPT-2 model**
----
-```python
+---```python
 output_dir = configuration.get_property('PYTHON_DIR') + "/gpt_models/mcb_model/"
 CUDA_LAUNCH_BLOCKING = 1
 # TensorFlow
@@ -160,8 +157,7 @@ For the experiments, the automatic metrics have the following input parameters:
 
 
 **BERTscoree metric**
----
-```python
+---```python
 output_dir = configuration.get_property('PYTHON_DIR') + "/gpt_models/bert-base-multilingual-cased/"
 tokenizer = AutoTokenizer.from_pretrained(output_dir)
 model = AutoModelWithLMHead.from_pretrained(output_dir)
@@ -225,7 +221,7 @@ The MCBGPT-2 model achieves slightly better scorees than RoGPT-2 model for the B
   </tr>
   <tr>
     <td align="center">Original</td>
-    <td align="center" colspan="4">Coordonatorul campaniei nationale de vaccinare, medicul militar Valeriu Gheorghita a vorbit despre finalul pandemiei in Romania.Intrebat, intr-o  emisiune televizata, cand crede ca se va reveni la viata normala, doctorul Gheorghita a spus Eu sper cat mai repede. Daca ma intrebati de o luna anume, cred ca undeva in iulie august usor usor vom intra intr-o normalitate care va fi din ce in ce mai concretizata pe masura ce nivelul de acoperire vaccinala va creste undeva peste a spus medicul Valeriu Gheorghita...</td>
+    <td align="center" colspan="4">Coordonatorul campaniei nationale de vaccinare, medicul militar Valeriu Gheorghita a vorbit despre finalul pandemiei in Romania.Intrebat, intr-o  emisiune televizata, cand crede ca se va reveni la viata normala, doctorul Gheorghita a spus Eu sper cat mai repede. if ma intrebati de o luna anume, cred ca undeva in iulie august usor usor vom intra intr-o normalitate care va fi din ce in ce mai concretizata pe masura ce nivelul de acoperire vaccinala va creste undeva peste a spus medicul Valeriu Gheorghita...</td>
   </tr>
     <tr>
     <td align="center">Link</td>
@@ -236,7 +232,7 @@ The MCBGPT-2 model achieves slightly better scorees than RoGPT-2 model for the B
   </tr>
   <tr>
     <td align="center">RoGPT-2 model</td>
-    <td align="center" colspan="4">….a spus medicul Valeriu Gheorghita, care a mai spus ca s-a intalnit cu ministrul sanatatii, Sorina Pintea, pentru a discuta despre starea de sanatate a populatiei si despre masurile care se vor lua pentru ca sa nu se mai ajunga la astfel de situatii, iar ministrul a promis ca va avea o discutie cu el si va vedea care sunt masurile pe care ministerul le va lua, dar si ce masuri vor fi luate de catre minister, atat pentru prevenirea, cat si pentru tratarea celor care au fost depistati cu COVID-19 si care nu au putut fi vaccinati, precum si masuri de combatere a epidemiei de coronavirus si a altor boli care pot fi transmise prin contact direct cu o persoana infectata cu virusul imunodeficientei umane (HIV).</td>
+    <td align="center" colspan="4">….a spus medicul Valeriu Gheorghita, care a mai spus ca s-a intalnit with ministrul sanatatii, Sorina Pintea, for a discuta despre starea de sanatate a populatiei si despre masurile care se vor lua for ca sa nu se mai ajunga la astfel de situatii, iar ministrul a promis ca va avea o discutie with el si va vedea care sunt masurile pe care ministerul le va lua, dar si ce masuri vor fi luate de catre minister, atat for prevenirea, cat si for tratarea celor care au fost depistati with COVID-19 si care nu au putut fi vaccinati, precum si masuri de combatere a epidemiei de coronavirus si a altor boli care pot fi transmise prin contact direct with o persoana infectata with virusul imunodeficientei umane (HIV).</td>
   </tr>
     <tr>
     <td align="center">Metrics</td>
@@ -248,7 +244,7 @@ The MCBGPT-2 model achieves slightly better scorees than RoGPT-2 model for the B
   </tr>
     <tr>
     <td align="center">MCBGPT-2 model</td>
-    <td align="center" colspan="4">….a spus medicul Valeriu Gheorghita. In ceea ce priveste vaccinarea cu cea de-a treia doza de vaccin, medicul a explicat ca, intr-adevar, nu se pune problema de a face o forma grava de boala, dar nu este un lucru foarte important pentru noi toti cei care se vaccineaza cu prima schema cu vaccinul de la compania Johnson  Johnson, pentru ca nu avem niciun fel de imunitate de grup peste 40%, iar pentru persoanele care au fost vaccinate cu schema completa au un risc scazut de cel putin 20 de ori sa se infecteze si cu o crestere a numberului de persoane care s-au vaccinat cu schema completa. De asemenea, el a mai spus ca este important sa avem o rata de pozitivare a testelor de maxim 20 la suta, a adaugat medicul.</td>
+    <td align="center" colspan="4">….a spus medicul Valeriu Gheorghita. In ceea ce priveste vaccinarea with cea de-a treia doza de vaccin, medicul a explicat ca, intr-adevar, nu se pune problema de a face o forma grava de boala, dar nu este un lucru foarte important for noi toti cei care se vaccineaza with prima schema with vaccinul de la compania Johnson  Johnson, for ca nu avem niciun fel de imunitate de grup peste 40%, iar for persoanele care au fost vaccinate with schema completa au un risc scazut de cel putin 20 de ori sa se infecteze si with o crestere a numberului de persoane care s-au vaccinat with schema completa. De asemenea, el a mai spus ca este important sa avem o rata de pozitivare a testelor de maxim 20 la suta, a adaugat medicul.</td>
   </tr>
      <tr>
     <td align="center">Metrics</td>
