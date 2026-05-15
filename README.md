@@ -1,5 +1,11 @@
 # Automatic Romanian Text Generation using GPT-2
 
+[![GitHub repo](https://img.shields.io/badge/GitHub-Automatic-Romanian-Text-Generation-using-GPT-2-181717?logo=github)](https://github.com/MariusCristianBuzea/Automatic-Romanian-Text-Generation-using-GPT-2)
+![language](https://img.shields.io/badge/language-Romanian%20NLP-0b7285)
+![python](https://img.shields.io/badge/python-3.x-3776ab)
+![transformers](https://img.shields.io/badge/transformers-Hugging%20Face-ffcc00)
+![install](https://img.shields.io/badge/install-requirements.txt-2f9e44)
+
 ## Prezentare
 
 Generare automată de text în limba română cu GPT-2, antrenat și evaluat pe corpusuri de știri.
